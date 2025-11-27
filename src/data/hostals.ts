@@ -10,7 +10,6 @@ export interface Room {
   capacityAdults: number;
   capacityChildren: number;
   surface: number;
-  price: number; // Prix en USD ($)
   image: string;
   amenities: string[];
 }
@@ -34,7 +33,7 @@ export interface Hostal {
 // Hostals de Koala Bolivia (Données en dur)
 export const hostals: Hostal[] = [
   {
-    id: 'eucalyptus-uyuni', // J'ai renommé l'ID pour la clarté si vous avez un autre Eucalyptus
+    id: 'eucalyptus-uyuni',
     destination: 'uyuni',
     nameEs: 'Hostal Eucalyptus Uyuni',
     nameEn: 'Eucalyptus Hostal Uyuni',
@@ -56,7 +55,6 @@ export const hostals: Hostal[] = [
         capacityAdults: 2,
         capacityChildren: 0,
         surface: 15,
-        price: 26,
         image: '/simpleroom-uyuni.webp',
         amenities: ['Baño privado', 'Calefacción', 'Agua caliente', 'WiFi', 'Ventana']
       },
@@ -72,7 +70,6 @@ export const hostals: Hostal[] = [
         capacityAdults: 2,
         capacityChildren: 1,
         surface: 25,
-        price: 42,
         image: '/doubleroom-uyuni.webp',
         amenities: ['Cama matrimonial', 'Baño privado', 'Calefacción', 'Agua caliente', 'WiFi', 'Vistas']
       },
@@ -88,7 +85,6 @@ export const hostals: Hostal[] = [
         capacityAdults: 2,
         capacityChildren: 1,
         surface: 25,
-        price: 42,
         image: '/doubleroom-uyuni.webp',
         amenities: ['2 camas individuales', 'Baño privado', 'Calefacción', 'Agua caliente', 'WiFi']
       },
@@ -104,7 +100,6 @@ export const hostals: Hostal[] = [
         capacityAdults: 3,
         capacityChildren: 3,
         surface: 30,
-        price: 51,
         image: '/tripleroom-uyuni.webp',
         amenities: ['3 camas individuales', 'Baño privado', 'Calefacción', 'Agua caliente', 'WiFi', 'Espacio amplio']
       }
@@ -113,7 +108,6 @@ export const hostals: Hostal[] = [
     phone: '+591 72401884',
     address: 'Calle Cabrera entre Santa Cruz y Colombia, Uyuni, Bolivia'
   },
-  
   
   {
     id: 'eucalyptus-potosi',
@@ -138,7 +132,6 @@ export const hostals: Hostal[] = [
         capacityAdults: 1,
         capacityChildren: 1,
         surface: 15,
-        price: 25, // 150 Bs. / 6.90
         image: '/standard-single-potosi.webp', 
         amenities: ['Baño privado', 'Calefacción', 'Agua caliente', 'WiFi', 'Vues']
       },
@@ -154,8 +147,7 @@ export const hostals: Hostal[] = [
         capacityAdults: 2,
         capacityChildren: 1,
         surface: 25,
-        price: 30, // 200 Bs. / 6.90
-        image: '/standard-double-potosi.webp', // Placeholder
+        image: '/standard-double-potosi.webp',
         amenities: ['Cama matrimonial', 'Baño privado', 'Calefacción', 'Agua caliente', 'WiFi']
       },
       {
@@ -170,8 +162,7 @@ export const hostals: Hostal[] = [
         capacityAdults: 2,
         capacityChildren: 1,
         surface: 25,
-        price: 30, // 200 Bs. / 6.90
-        image: '/standard-twin-potosi.webp', // Placeholder
+        image: '/standard-twin-potosi.webp',
         amenities: ['2 camas individuales', 'Baño privado', 'Calefacción', 'Agua caliente', 'WiFi']
       },
       {
@@ -186,7 +177,6 @@ export const hostals: Hostal[] = [
         capacityAdults: 3,
         capacityChildren: 3,
         surface: 30,
-        price: 40, // 270 Bs. / 6.90
         image: '/standard-triple-potosi.webp', 
         amenities: ['3 camas individuales', 'Baño privado', 'Calefacción', 'Agua caliente', 'WiFi', 'Espacio amplio']
       },
@@ -202,7 +192,6 @@ export const hostals: Hostal[] = [
         capacityAdults: 3,
         capacityChildren: 3,
         surface: 30,
-        price: 40, // 270 Bs. / 6.90
         image: '/familyroom-potosi.webp', 
         amenities: ['Cama matrimonial + 1 simple', 'Baño privado', 'Calefacción', 'Agua caliente', 'WiFi', 'Vistas']
       }

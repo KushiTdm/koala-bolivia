@@ -2,7 +2,7 @@
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { Language, getTranslation } from '../data/translations';
 import { getHostalByDestination } from '../data/hostals';
-import { Users, Maximize2, DollarSign, ArrowLeft, MessageCircle, Check } from 'lucide-react';
+import { Users, Maximize2, ArrowLeft, MessageCircle, Check } from 'lucide-react';
 
 export default function RoomDetail() {
   const { id } = useParams<{ id: string }>();
@@ -92,10 +92,10 @@ export default function RoomDetail() {
 
   const handleWhatsAppReservation = () => {
     const message = lang === 'es' 
-      ? `Hola, me gustaría reservar la habitación "${getName()}" por $${room.price}/noche.`
+      ? `Hola, me gustaría reservar la habitación "${getName()}".`
       : lang === 'en'
-      ? `Hello, I would like to book the "${getName()}" room for $${room.price}/night.`
-      : `Bonjour, je voudrais réserver la chambre "${getName()}" pour $${room.price}/nuit.`;
+      ? `Hello, I would like to book the "${getName()}" room.`
+      : `Bonjour, je voudrais réserver la chambre "${getName()}".`;
     
     const phoneNumber = getWhatsAppNumber();
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -127,9 +127,6 @@ export default function RoomDetail() {
                 alt={getName()}
                 className="w-full h-[500px] object-cover"
               />
-              <div className="absolute top-6 right-6 bg-amber-500 text-white px-6 py-3 rounded-full font-bold text-2xl shadow-xl">
-                ${room.price}
-              </div>
             </div>
           </div>
 
@@ -141,15 +138,7 @@ export default function RoomDetail() {
             </div>
 
             {/* Informations clés */}
-            <div className="grid grid-cols-3 gap-6 py-8 border-y border-slate-200">
-              <div className="text-center">
-                <div className="flex justify-center mb-3">
-                  <DollarSign size={32} className="text-amber-600" />
-                </div>
-                <div className="text-3xl font-bold text-slate-900">${room.price}</div>
-                <div className="text-sm text-slate-600 mt-1">{getTranslation(lang, 'uyuni.perNight')}</div>
-              </div>
-
+            <div className="grid grid-cols-2 gap-6 py-8 border-y border-slate-200">
               <div className="text-center">
                 <div className="flex justify-center mb-3">
                   <Users size={32} className="text-amber-600" />
