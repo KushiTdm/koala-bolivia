@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook } from 'lucide-react';
 import { Language, getTranslation } from '../data/translations';
 
 export default function Footer() {
@@ -26,21 +26,24 @@ export default function Footer() {
 
   const destination = getCurrentDestination();
 
-  const addresses = {
+  const contactInfo = {
     uyuni: {
+      phone: '59161913121',
+      email: 'eucalyptusuyuni@gmail.com',
       street: 'Calle Cabrera entre Santa Cruz y Colombia',
-      coords: '-19.2271,-66.8253' // coordonnées Uyuni
+      coords: '-19.2271,-66.8253'
     },
     potosi: {
+      phone: '59172401884',
+      email: 'salarpotosi@gmail.com',
       street: 'Linares 88A, Villa Imperial de Potosí',
-      coords: '-19.5859,-65.7533' // coordonnées Potosí
+      coords: '-19.5859,-65.7533'
     }
   };
 
-  const currentAddress = addresses[destination];
+  const currentContact = contactInfo[destination];
 
   const handlePhoneClick = () => {
-    const phoneNumber = '59172401884';
     const message = encodeURIComponent(
       lang === 'es'
         ? 'Hola, me gustaría más información sobre sus servicios'
@@ -48,12 +51,30 @@ export default function Footer() {
         ? 'Hi, I would like more information about your services'
         : 'Bonjour, j\'aimerais plus d\'informations sur vos services'
     );
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    const whatsappUrl = `https://wa.me/${currentContact.phone}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 
+  const handleEmailClick = () => {
+    const subject = encodeURIComponent(
+      lang === 'es'
+        ? 'Solicitud de información'
+        : lang === 'en'
+        ? 'Information request'
+        : 'Demande d\'information'
+    );
+    const body = encodeURIComponent(
+      lang === 'es'
+        ? 'Hola,\n\nMe gustaría obtener más información sobre sus servicios.\n\nGracias.'
+        : lang === 'en'
+        ? 'Hello,\n\nI would like to get more information about your services.\n\nThank you.'
+        : 'Bonjour,\n\nJ\'aimerais obtenir plus d\'informations sur vos services.\n\nMerci.'
+    );
+    window.location.href = `mailto:${currentContact.email}?subject=${subject}&body=${body}`;
+  };
+
   const handleAddressClick = () => {
-    const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(currentAddress.street)}/`;
+    const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(currentContact.street)}/`;
     window.open(mapsUrl, '_blank');
   };
 
@@ -73,23 +94,26 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">{getTranslation(lang, 'footer.contact')}</h4>
             <div className="space-y-3 text-sm text-slate-300">
-              <div className="flex items-center gap-2">
+              <button
+                onClick={handleEmailClick}
+                className="flex items-center gap-2 hover:text-amber-500 transition-colors cursor-pointer"
+              >
                 <Mail size={16} className="text-amber-500" />
-                <span>koalabolivia@hotmail.com</span>
-              </div>
+                <span>{currentContact.email}</span>
+              </button>
               <button
                 onClick={handlePhoneClick}
                 className="flex items-center gap-2 hover:text-amber-500 transition-colors cursor-pointer"
               >
                 <Phone size={16} className="text-amber-500" />
-                <span>+591 72401884</span>
+                <span>+{currentContact.phone}</span>
               </button>
               <button
                 onClick={handleAddressClick}
                 className="flex items-start gap-2 hover:text-amber-500 transition-colors cursor-pointer w-full text-left"
               >
                 <MapPin size={16} className="text-amber-500 mt-1 flex-shrink-0" />
-                <span>{currentAddress.street}</span>
+                <span>{currentContact.street}</span>
               </button>
             </div>
           </div>
@@ -99,9 +123,6 @@ export default function Footer() {
             <div className="flex gap-4">
               <a href="https://www.facebook.com/p/KOALA-TOURS-100064098846414/" className="hover:text-amber-500 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="hover:text-amber-500 transition-colors">
-                <Instagram size={20} />
               </a>
             </div>
           </div>

@@ -108,8 +108,18 @@ export default function TourDetail() {
     }
   };
 
+  const getWhatsAppNumber = () => {
+    if (tour.destination.toLowerCase() === 'potosi') {
+      return '59161914606';
+    } else if (tour.destination.toLowerCase() === 'uyuni') {
+      return '59172401884';
+    }
+    // Numéro par défaut si la destination n'est ni Potosi ni Uyuni
+    return '59172401884';
+  };
+
   const handleWhatsApp = () => {
-    const phoneNumber = '59172401884';
+    const phoneNumber = getWhatsAppNumber();
     const message = encodeURIComponent(
       lang === 'es' 
         ? `Hola, me gustaría reservar el tour: ${getTitle()}`

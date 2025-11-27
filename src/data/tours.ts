@@ -22,156 +22,131 @@ export interface Tour {
 }
 
 export const tours: Tour[] = [
-  {
-    id: 'uyuni-express',
-    destination: 'uyuni',
-    titleEs: 'Inmersión Express',
-    titleEn: 'Express Immersion',
-    titleFr: 'Immersion Express',
-    descriptionEs: 'Ideal para quienes tienen poco tiempo. Visita del Cementerio de trenes, el pueblo de Colchani, el Museo de Sal y la isla de Incahuasi. Aprovecha el atardecer para fotos espectaculares sobre la blancura infinita.',
-    descriptionEn: 'Ideal for those with limited time. Visit the Train Cemetery, Colchani village, Salt Museum and Incahuasi Island. Take advantage of sunset for spectacular photos on the infinite whiteness.',
-    descriptionFr: 'Idéal pour ceux qui ont peu de temps. Visite du Cimetière des trains, du village de Colchani, du Musée du Sel et de l\'île d\'Incahuasi. Profitez du coucher de soleil pour des photos spectaculaires sur la blancheur infinie.',
-    days: 1,
-    nights: 0,
-    image: '/salar-tour1.jpg',
-    includesEs: ['Transporte 4x4', 'Guía trilingüe certificado', 'Almuerzo', 'Cementerio de trenes', 'Colchani', 'Museo de Sal', 'Isla Incahuasi', 'Fotos de atardecer'],
-    includesEn: ['4x4 Transport', 'Certified trilingual guide', 'Lunch', 'Train Cemetery', 'Colchani', 'Salt Museum', 'Incahuasi Island', 'Sunset photos'],
-    includesFr: ['Transport 4x4', 'Guide trilingue certifié', 'Déjeuner', 'Cimetière des trains', 'Colchani', 'Musée du Sel', 'Île d\'Incahuasi', 'Photos du coucher de soleil'],
-    highlightsEs: ['Cementerio de trenes', 'Colchani', 'Isla Incahuasi', 'Atardecer en el Salar', 'Fotos espectaculares'],
-    highlightsEn: ['Train Cemetery', 'Colchani', 'Incahuasi Island', 'Sunset on the Salar', 'Spectacular photos'],
-    highlightsFr: ['Cimetière des trains', 'Colchani', 'Île d\'Incahuasi', 'Coucher de soleil sur le Salar', 'Photos spectaculaires'],
-    itineraryEs: [
-      {
-        day: 1,
-        title: 'Aventura de un día completo',
-        description: 'Comenzamos visitando el famoso Cementerio de trenes históricos. Continuamos hacia el pueblo de Colchani y su Museo de Sal. Exploramos el vasto Salar hasta llegar a la impresionante Isla Incahuasi con sus cactus gigantes. Terminamos con una sesión de fotos durante el espectacular atardecer sobre la blancura infinita.'
-      }
-    ],
-    itineraryEn: [
-      {
-        day: 1,
-        title: 'Full day adventure',
-        description: 'We start by visiting the famous historic Train Cemetery. We continue to Colchani village and its Salt Museum. We explore the vast Salar until reaching the impressive Incahuasi Island with its giant cacti. We finish with a photo session during the spectacular sunset over the infinite whiteness.'
-      }
-    ],
-    itineraryFr: [
-      {
-        day: 1,
-        title: 'Aventure d\'une journée complète',
-        description: 'Nous commençons par visiter le célèbre Cimetière des trains historiques. Nous continuons vers le village de Colchani et son Musée du Sel. Nous explorons le vaste Salar jusqu\'à atteindre l\'impressionnante île d\'Incahuasi avec ses cactus géants. Nous terminons par une session photo lors du spectaculaire coucher de soleil sur la blancheur infinie.'
-      }
-    ]
-  },
-  {
-    id: 'uyuni-classic',
-    destination: 'uyuni',
-    titleEs: 'El Clásico Completo',
-    titleEn: 'The Complete Classic',
-    titleFr: 'Le Classique Complet',
-    descriptionEs: 'Cubre lo esencial del Salar y comienza la exploración de las Lagunas Coloridas el segundo día. Noche en alojamiento rústico. El tour más popular para una excelente panorámica de la región.',
-    descriptionEn: 'Covers the essentials of the Salar and begins exploring the Colored Lagoons on the second day. Night in rustic accommodation. The most popular tour for an excellent overview of the region.',
-    descriptionFr: 'Couvre les essentiels du Salar et commence l\'exploration des Lagunes Colorées le deuxième jour. Nuit en hébergement rustique. Le tour le plus populaire pour un excellent aperçu de la région.',
-    days: 2,
-    nights: 1,
-    image: '/salar-2d-tour1.jpg',
-    includesEs: ['Transporte 4x4', 'Guía trilingüe experimentado', 'Alojamiento rústico (1 noche)', 'Todas las comidas', 'Cementerio de trenes', 'Colchani', 'Isla Incahuasi', 'Lagunas Coloradas'],
-    includesEn: ['4x4 Transport', 'Experienced trilingual guide', 'Rustic accommodation (1 night)', 'All meals', 'Train Cemetery', 'Colchani', 'Incahuasi Island', 'Colored Lagoons'],
-    includesFr: ['Transport 4x4', 'Guide trilingue expérimenté', 'Hébergement rustique (1 nuit)', 'Tous les repas', 'Cimetière des trains', 'Colchani', 'Île d\'Incahuasi', 'Lagunes Colorées'],
-    highlightsEs: ['Salar de Uyuni', 'Isla Incahuasi', 'Lagunas coloridas', 'Géothermia', 'Puesta de sol épica'],
-    highlightsEn: ['Salar de Uyuni', 'Incahuasi Island', 'Colored lagoons', 'Geothermal activity', 'Epic sunset'],
-    highlightsFr: ['Salar de Uyuni', 'Île d\'Incahuasi', 'Lagunes colorées', 'Activité géothermique', 'Coucher de soleil épique'],
-    itineraryEs: [
-      {
-        day: 1,
-        title: 'Inmersión en el Salar',
-        description: 'Salida desde Uyuni visitando el Cementerio de trenes y Colchani. Conducimos hacia el corazón del Salar, explorando sus extensiones infinitas de sal blanca. Visitamos la Isla Incahuasi con sus cactus milenarios. Atardecer espectacular sobre el Salar. Noche en alojamiento rústico.'
-      },
-      {
-        day: 2,
-        title: 'Lagunas Coloridas y regreso',
-        description: 'Después del desayuno, nos dirigimos hacia las impresionantes lagunas de colores variados. Observamos flamencos rosados en su hábitat natural. Visitamos zonas geotérmicas con géiseres activos. Regreso a Uyuni por la tarde.'
-      }
-    ],
-    itineraryEn: [
-      {
-        day: 1,
-        title: 'Salar Immersion',
-        description: 'Departure from Uyuni visiting the Train Cemetery and Colchani. We drive towards the heart of the Salar, exploring its infinite expanses of white salt. We visit Incahuasi Island with its millennial cacti. Spectacular sunset over the Salar. Night in rustic accommodation.'
-      },
-      {
-        day: 2,
-        title: 'Colored Lagoons and return',
-        description: 'After breakfast, we head towards the impressive multi-colored lagoons. We observe pink flamingos in their natural habitat. We visit geothermal areas with active geysers. Return to Uyuni in the afternoon.'
-      }
-    ],
-    itineraryFr: [
-      {
-        day: 1,
-        title: 'Immersion dans le Salar',
-        description: 'Départ d\'Uyuni en visitant le Cimetière des trains et Colchani. Nous conduisons vers le cœur du Salar, explorant ses étendues infinies de sel blanc. Nous visitons l\'île d\'Incahuasi avec ses cactus millénaires. Coucher de soleil spectaculaire sur le Salar. Nuit en hébergement rustique.'
-      },
-      {
-        day: 2,
-        title: 'Lagunes Colorées et retour',
-        description: 'Après le petit-déjeuner, nous nous dirigeons vers les impressionnantes lagunes aux couleurs variées. Nous observons les flamants roses dans leur habitat naturel. Nous visitons des zones géothermiques avec des geysers actifs. Retour à Uyuni dans l\'après-midi.'
-      }
-    ]
-  },
+  // ============================================
+  // UYUNI - UNIQUE TOUR PERSONNALISÉ
+  // ============================================
   {
     id: 'uyuni-custom',
     destination: 'uyuni',
-    titleEs: 'Aventura Andina a Medida',
-    titleEn: 'Custom Andean Adventure',
-    titleFr: 'Aventure Andine Sur Mesure',
-    descriptionEs: 'Diseñado para fotógrafos, excursionistas o quienes desean explorar zonas aisladas (ej: Ruta de las Joyas, volcanes). Personalizamos el itinerario, las comidas y los alojamientos (incluidos hoteles de sal).',
-    descriptionEn: 'Designed for photographers, hikers or those wanting to explore isolated areas (e.g., Route of Jewels, volcanoes). We customize the itinerary, meals and accommodations (including salt hotels).',
-    descriptionFr: 'Conçu pour les photographes, les randonneurs ou ceux qui veulent explorer des zones isolées (ex: Route des Joyaux, volcans). Nous personnalisons l\'itinéraire, les repas et les hébergements (y compris les hôtels de sel).',
+    titleEs: 'Expedición Personalizada al Salar',
+    titleEn: 'Custom Salar Expedition',
+    titleFr: 'Expédition Personnalisée au Salar',
+    descriptionEs: 'Olvídate de los tours masivos. Diseñamos tu aventura única en el Salar de Uyuni, explorando lugares secretos donde otros no van. Nuestro guía experto se adapta completamente a tu ritmo, tus pasiones y tus ganas de descubrir.',
+    descriptionEn: 'Forget mass tours. We design your unique adventure in the Salar de Uyuni, exploring secret places where others don\'t go. Our expert guide adapts completely to your pace, your passions and your desire to discover.',
+    descriptionFr: 'Oubliez les tours de masse. Nous concevons votre aventure unique dans le Salar d\'Uyuni, en explorant des lieux secrets où les autres ne vont pas. Notre guide expert s\'adapte complètement à votre rythme, vos passions et vos envies de découverte.',
     days: 3,
     nights: 2,
     image: '/salar-custum-tour1.jpg',
-    includesEs: ['Transporte 4x4 privado', 'Guía trilingüe especializado', 'Alojamiento personalizado (incluye hoteles de sal)', 'Todas las comidas gourmet', 'Itinerario flexible', 'Zonas remotas', 'Fotografía profesional', 'Equipo especializado'],
-    includesEn: ['Private 4x4 Transport', 'Specialized trilingual guide', 'Personalized accommodation (includes salt hotels)', 'All gourmet meals', 'Flexible itinerary', 'Remote areas', 'Professional photography', 'Specialized equipment'],
-    includesFr: ['Transport 4x4 privé', 'Guide trilingue spécialisé', 'Hébergement personnalisé (comprend hôtels de sel)', 'Tous les repas gastronomiques', 'Itinéraire flexible', 'Zones reculées', 'Photographie professionnelle', 'Équipement spécialisé'],
-    highlightsEs: ['Itinerario personalizado', 'Hoteles de sal', 'Zonas remotas', 'Volcanes', 'Ruta de las Joyas', 'Fotografía profesional'],
-    highlightsEn: ['Custom itinerary', 'Salt hotels', 'Remote areas', 'Volcanoes', 'Route of Jewels', 'Professional photography'],
-    highlightsFr: ['Itinéraire personnalisé', 'Hôtels de sel', 'Zones reculées', 'Volcans', 'Route des Joyaux', 'Photographie professionnelle'],
+    includesEs: [
+      'Transporte 4x4 privado',
+      'Guía trilingüe experimentado y flexible',
+      'Alojamiento personalizado (hoteles de sal disponibles)',
+      'Todas las comidas adaptadas a tus preferencias',
+      'Itinerario 100% flexible según tus intereses',
+      'Acceso a zonas poco frecuentadas',
+      'Tiempo sin prisas para fotografía',
+      'Equipo especializado incluido'
+    ],
+    includesEn: [
+      'Private 4x4 transport',
+      'Experienced and flexible trilingual guide',
+      'Personalized accommodation (salt hotels available)',
+      'All meals adapted to your preferences',
+      '100% flexible itinerary according to your interests',
+      'Access to less frequented areas',
+      'Unhurried time for photography',
+      'Specialized equipment included'
+    ],
+    includesFr: [
+      'Transport 4x4 privé',
+      'Guide trilingue expérimenté et flexible',
+      'Hébergement personnalisé (hôtels de sel disponibles)',
+      'Tous les repas adaptés à vos préférences',
+      'Itinéraire 100% flexible selon vos intérêts',
+      'Accès aux zones peu fréquentées',
+      'Temps sans hâte pour la photographie',
+      'Équipement spécialisé inclus'
+    ],
+    highlightsEs: [
+      '🌋 Volcán Tunupa - Vista panorámica sin multitudes',
+      '🚴 Isla Piapia en bicicleta hasta Incahuasi',
+      '🏝️ Islas secretas del Salar poco visitadas',
+      '📸 Sesiones fotográficas en lugares vírgenes',
+      '⏰ A tu ritmo, sin prisas ni grupos grandes',
+      '🎨 Itinerario diseñado según tus pasiones'
+    ],
+    highlightsEn: [
+      '🌋 Tunupa Volcano - Panoramic view without crowds',
+      '🚴 Piapia Island by bike to Incahuasi',
+      '🏝️ Secret islands of the Salar rarely visited',
+      '📸 Photo sessions in pristine locations',
+      '⏰ At your pace, no rush or large groups',
+      '🎨 Itinerary designed according to your passions'
+    ],
+    highlightsFr: [
+      '🌋 Volcan Tunupa - Vue panoramique sans foules',
+      '🚴 Île Piapia à vélo jusqu\'à Incahuasi',
+      '🏝️ Îles secrètes du Salar peu visitées',
+      '📸 Sessions photo dans des endroits vierges',
+      '⏰ À votre rythme, sans hâte ni grands groupes',
+      '🎨 Itinéraire conçu selon vos passions'
+    ],
     itineraryEs: [
       {
         day: 1,
-        title: 'Diseño personalizado - Día 1',
-        description: 'El itinerario se diseña completamente según tus intereses: fotografía de amaneceres/atardeceres, exploración de volcanes, visita a comunidades remotas, o rutas menos transitadas. Incluye alojamiento en hotel de sal de lujo si lo deseas.'
+        title: '🗺️ Tu Aventura, Tus Reglas',
+        description: 'Creamos juntos el itinerario perfecto para ti. ¿Prefieres fotografía de amaneceres épicos? ¿Te apasiona el ciclismo explorando islas remotas como Piapia? ¿Quieres conquistar el Volcán Tunupa para vistas sin igual? ¿Buscas la tranquilidad de rincones donde no llegan los tours masivos? Tu guía diseña cada día según tus deseos, adaptándose a tu energía y curiosidad.'
       },
       {
         day: 2,
-        title: 'Diseño personalizado - Día 2',
-        description: 'Continuación de tu aventura personalizada. Opciones incluyen: ascenso a volcanes, exploración de la Ruta de las Joyas (lagunas remotas), sesiones fotográficas en horarios específicos, o visitas culturales a comunidades locales.'
+        title: '🚴 Ejemplos de Experiencias Únicas',
+        description: 'VOLCÁN TUNUPA: Ascenso opcional para contemplar el Salar desde las alturas, lejos de las multitudes. ISLA PIAPIA EN BICICLETA: Pedalea por la inmensidad blanca hasta Incahuasi, una experiencia íntima y auténtica. ISLAS SECRETAS: Exploramos rincones del Salar donde otros no van - tu guía conoce cada joya escondida. FOTOGRAFÍA SIN PRISAS: Tiempo ilimitado en cada spot para capturar LA foto perfecta, sin grupos presionando.'
+      },
+      {
+        day: 3,
+        title: '✨ Flexibilidad Total',
+        description: '¿Quieres quedarte más tiempo en un lugar que te fascina? ¿Cambiar de planes según el clima o tu inspiración? ¿Madrugar para el amanecer perfecto o relajarte hasta tarde? Tu guía se adapta completamente. Alojamiento en hoteles de sal de lujo disponibles, o refugios rústicos auténticos - tú decides. Comidas personalizadas según tus preferencias. Esta es TU expedición.'
       }
     ],
     itineraryEn: [
       {
         day: 1,
-        title: 'Custom design - Day 1',
-        description: 'The itinerary is completely designed according to your interests: sunrise/sunset photography, volcano exploration, visits to remote communities, or less traveled routes. Includes accommodation in luxury salt hotel if desired.'
+        title: '🗺️ Your Adventure, Your Rules',
+        description: 'We create together the perfect itinerary for you. Do you prefer epic sunrise photography? Are you passionate about cycling exploring remote islands like Piapia? Want to conquer Tunupa Volcano for unparalleled views? Looking for the tranquility of corners where mass tours don\'t reach? Your guide designs each day according to your wishes, adapting to your energy and curiosity.'
       },
       {
         day: 2,
-        title: 'Custom design - Day 2',
-        description: 'Continuation of your personalized adventure. Options include: volcano ascents, exploration of the Route of Jewels (remote lagoons), photo sessions at specific times, or cultural visits to local communities.'
+        title: '🚴 Examples of Unique Experiences',
+        description: 'TUNUPA VOLCANO: Optional ascent to contemplate the Salar from the heights, far from the crowds. PIAPIA ISLAND BY BIKE: Pedal through the white immensity to Incahuasi, an intimate and authentic experience. SECRET ISLANDS: We explore corners of the Salar where others don\'t go - your guide knows every hidden gem. UNHURRIED PHOTOGRAPHY: Unlimited time at each spot to capture THE perfect photo, without groups rushing you.'
+      },
+      {
+        day: 3,
+        title: '✨ Total Flexibility',
+        description: 'Want to stay longer in a place that fascinates you? Change plans according to weather or your inspiration? Wake up early for the perfect sunrise or relax until late? Your guide adapts completely. Accommodation in luxury salt hotels available, or authentic rustic refuges - you decide. Personalized meals according to your preferences. This is YOUR expedition.'
       }
     ],
     itineraryFr: [
       {
         day: 1,
-        title: 'Conception personnalisée - Jour 1',
-        description: 'L\'itinéraire est entièrement conçu selon vos intérêts : photographie des levers/couchers de soleil, exploration de volcans, visites de communautés reculées, ou routes moins fréquentées. Comprend l\'hébergement dans un hôtel de sel de luxe si désiré.'
+        title: '🗺️ Votre Aventure, Vos Règles',
+        description: 'Nous créons ensemble l\'itinéraire parfait pour vous. Préférez-vous la photographie de levers de soleil épiques ? Êtes-vous passionné de vélo explorant des îles reculées comme Piapia ? Voulez-vous conquérir le Volcan Tunupa pour des vues incomparables ? Cherchez-vous la tranquillité de coins où les tours de masse n\'arrivent pas ? Votre guide conçoit chaque jour selon vos souhaits, s\'adaptant à votre énergie et votre curiosité.'
       },
       {
         day: 2,
-        title: 'Conception personnalisée - Jour 2',
-        description: 'Continuation de votre aventure personnalisée. Les options incluent : ascensions de volcans, exploration de la Route des Joyaux (lagunes reculées), sessions photo à des horaires spécifiques, ou visites culturelles dans des communautés locales.'
+        title: '🚴 Exemples d\'Expériences Uniques',
+        description: 'VOLCAN TUNUPA : Ascension optionnelle pour contempler le Salar depuis les hauteurs, loin des foules. ÎLE PIAPIA À VÉLO : Pédalez à travers l\'immensité blanche jusqu\'à Incahuasi, une expérience intime et authentique. ÎLES SECRÈTES : Nous explorons des recoins du Salar où les autres ne vont pas - votre guide connaît chaque joyau caché. PHOTOGRAPHIE SANS HÂTE : Temps illimité à chaque spot pour capturer LA photo parfaite, sans groupes qui vous pressent.'
+      },
+      {
+        day: 3,
+        title: '✨ Flexibilité Totale',
+        description: 'Vous voulez rester plus longtemps dans un endroit qui vous fascine ? Changer de plans selon la météo ou votre inspiration ? Vous lever tôt pour le lever de soleil parfait ou vous détendre jusqu\'à tard ? Votre guide s\'adapte complètement. Hébergement dans des hôtels de sel de luxe disponibles, ou refuges rustiques authentiques - vous décidez. Repas personnalisés selon vos préférences. Ceci est VOTRE expédition.'
       }
     ]
   },
+
+  // ============================================
+  // POTOSI TOURS (inchangés)
+  // ============================================
   {
     id: 'potosi-cerro-rico',
     destination: 'potosi',

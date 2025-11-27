@@ -114,7 +114,7 @@ export const hostals: Hostal[] = [
     address: 'Calle Cabrera entre Santa Cruz y Colombia, Uyuni, Bolivia'
   },
   
-  // NOUVELLE ENTRÉE MISE À JOUR POUR POTOSÍ (Hostal Eucalyptus Potosí)
+  
   {
     id: 'eucalyptus-potosi',
     destination: 'potosi',

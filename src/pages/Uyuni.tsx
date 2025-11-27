@@ -220,6 +220,47 @@ export default function Uyuni() {
           </div>
         </section>
 
+        {/* Encart Guide - Après la section hero transition */}
+        <section className="mb-20">
+          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-3xl mx-auto border-2 border-blue-100">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              {/* Photo du guide */}
+              <div className="flex-shrink-0">
+                <img 
+                  src="/wilfrid-guide.jpg" 
+                  alt="Guide local"
+                  className="w-32 h-32 rounded-full object-cover border-4 border-blue-600 shadow-lg"
+                />
+              </div>
+              
+              {/* Description */}
+              <div className="text-left flex-1">
+                <p className="text-blue-900 font-bold text-2xl mb-2 italic">Imaynalla</p>
+                <h3 className="text-slate-900 font-bold text-xl mb-3">
+                  {lang === 'es' 
+                    ? 'Tu Guía Experto' 
+                    : lang === 'en' 
+                    ? 'Your Expert Guide' 
+                    : 'Votre Guide Expert'}
+                </h3>
+                <p className="text-slate-700 leading-relaxed text-sm md:text-base mb-3">
+                  {lang === 'es'
+                    ? 'Originario de Potosí, con 20 años de experiencia como guía de minas y del Salar de Uyuni, conoce la región como nadie. Su doble especialización te garantiza una experiencia única y auténtica. Habla español, inglés, francés y quechua para acompañarte en tu aventura.'
+                    : lang === 'en'
+                    ? 'Originally from Potosí, with 20 years of experience as both a mine guide and Uyuni Salt Flat guide, he knows the region like no one else. His dual expertise guarantees you a unique and authentic experience. Speaks Spanish, English, French, and Quechua to accompany you on your adventure.'
+                    : 'Originaire de Potosí, avec 20 ans d\'expérience comme guide de mines et du Salar d\'Uyuni, il connaît la région comme personne. Sa double spécialisation vous garantit une expérience unique et authentique. Parle espagnol, anglais, français et quechua pour vous accompagner dans votre aventure.'}
+                </p>
+                <div className="flex gap-2 flex-wrap justify-center md:justify-start">
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">🇪🇸 Español</span>
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">🇬🇧 English</span>
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">🇫🇷 Français</span>
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">🏔️ Quechua</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Section Tours avec fond différent */}
         <section ref={toursRef} className="relative px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-b from-blue-50 to-white mb-20">
           <div className="max-w-7xl mx-auto">
