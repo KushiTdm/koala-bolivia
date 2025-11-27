@@ -65,10 +65,10 @@ export default function Home() {
             </h2>
             <p className="text-lg md:text-xl mb-8 text-amber-50 leading-relaxed transform transition-all duration-500 group-hover:translate-x-2">
               {lang === 'es'
-                ? 'Viaja en el tiempo explorando la historia colonial y minera de Bolivia. Hospédate en Koala Den, nuestro hostal histórico.'
+                ? 'Viaja en el tiempo explorando la historia colonial y minera de Bolivia. Hospédate en Hostal Eucalyptus, nuestro hostal histórico.'
                 : lang === 'en'
-                ? 'Travel back in time exploring Bolivia\'s colonial and mining history. Stay at Koala Den, our historic hostel.'
-                : 'Voyagez dans le temps en explorant l\'histoire coloniale et minière de la Bolivie. Séjournez au Koala Den, notre auberge historique.'}
+                ? 'Travel back in time exploring Bolivia\'s colonial and mining history. Stay at Hostal Eucalyptus, our historic hostel.'
+                : 'Voyagez dans le temps en explorant l\'histoire coloniale et minière de la Bolivie. Séjournez au Hostal Eucalyptus, notre auberge historique.'}
             </p>
             <Link
               to={`/${lang}/potosi`}
