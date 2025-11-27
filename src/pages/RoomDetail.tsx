@@ -71,6 +71,25 @@ export default function RoomDetail() {
     }
   };
 
+  const getWhatsAppNumber = () => {
+    if (destination.toLowerCase() === 'potosi') {
+      return '59172401884';
+    } else if (destination.toLowerCase() === 'uyuni') {
+      return '59161913121';
+    }
+    // Numéro par défaut
+    return '59172401884';
+  };
+
+  const getWhatsAppDisplayNumber = () => {
+    if (destination.toLowerCase() === 'potosi') {
+      return '+591 72401884';
+    } else if (destination.toLowerCase() === 'uyuni') {
+      return '+591 61913121';
+    }
+    return '+591 72401884';
+  };
+
   const handleWhatsAppReservation = () => {
     const message = lang === 'es' 
       ? `Hola, me gustaría reservar la habitación "${getName()}" por $${room.price}/noche.`
@@ -78,7 +97,8 @@ export default function RoomDetail() {
       ? `Hello, I would like to book the "${getName()}" room for $${room.price}/night.`
       : `Bonjour, je voudrais réserver la chambre "${getName()}" pour $${room.price}/nuit.`;
     
-    const whatsappUrl = `https://wa.me/59172401884?text=${encodeURIComponent(message)}`;
+    const phoneNumber = getWhatsAppNumber();
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -172,7 +192,8 @@ export default function RoomDetail() {
                 {lang === 'es' ? 'Reservar por WhatsApp' : lang === 'en' ? 'Book via WhatsApp' : 'Réserver par WhatsApp'}
               </button>
               <p className="text-center text-sm text-slate-600 mt-4">
-                {lang === 'es' ? 'Contacto directo: +591 72401884' : lang === 'en' ? 'Direct contact: +591 72401884' : 'Contact direct : +591 72401884'}
+                {lang === 'es' ? 'Contacto directo: ' : lang === 'en' ? 'Direct contact: ' : 'Contact direct : '}
+                {getWhatsAppDisplayNumber()}
               </p>
             </div>
           </div>
