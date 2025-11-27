@@ -78,7 +78,7 @@ export default function RoomDetail() {
       ? `Hello, I would like to book the "${getName()}" room for $${room.price}/night.`
       : `Bonjour, je voudrais réserver la chambre "${getName()}" pour $${room.price}/nuit.`;
     
-    const whatsappUrl = `https://wa.me/59161913121?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/59172401884?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -172,7 +172,7 @@ export default function RoomDetail() {
                 {lang === 'es' ? 'Reservar por WhatsApp' : lang === 'en' ? 'Book via WhatsApp' : 'Réserver par WhatsApp'}
               </button>
               <p className="text-center text-sm text-slate-600 mt-4">
-                {lang === 'es' ? 'Contacto directo: +591 61913121' : lang === 'en' ? 'Direct contact: +591 61913121' : 'Contact direct : +591 61913121'}
+                {lang === 'es' ? 'Contacto directo: +591 72401884' : lang === 'en' ? 'Direct contact: +591 72401884' : 'Contact direct : +591 72401884'}
               </p>
             </div>
           </div>

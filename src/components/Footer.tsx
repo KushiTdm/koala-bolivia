@@ -40,7 +40,7 @@ export default function Footer() {
   const currentAddress = addresses[destination];
 
   const handlePhoneClick = () => {
-    const phoneNumber = '591619131210';
+    const phoneNumber = '59172401884';
     const message = encodeURIComponent(
       lang === 'es'
         ? 'Hola, me gustaría más información sobre sus servicios'
@@ -82,7 +82,7 @@ export default function Footer() {
                 className="flex items-center gap-2 hover:text-amber-500 transition-colors cursor-pointer"
               >
                 <Phone size={16} className="text-amber-500" />
-                <span>+591 61913121</span>
+                <span>+591 72401884</span>
               </button>
               <button
                 onClick={handleAddressClick}

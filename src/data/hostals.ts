@@ -110,7 +110,7 @@ export const hostals: Hostal[] = [
       }
     ],
     email: 'eucalyptusuyuni@mail.com',
-    phone: '+591 61913121',
+    phone: '+591 72401884',
     address: 'Calle Cabrera entre Santa Cruz y Colombia, Uyuni, Bolivia'
   },
   
@@ -208,7 +208,7 @@ export const hostals: Hostal[] = [
       }
     ],
     email: 'koalabolivia@hotmail.com',
-    phone: '+591 72401884',
+    phone: '+59172401884',
     address: 'Linares Street 88A Frias, Potosi Bolivia'
   }
 ];

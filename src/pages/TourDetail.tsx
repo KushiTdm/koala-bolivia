@@ -109,7 +109,7 @@ export default function TourDetail() {
   };
 
   const handleWhatsApp = () => {
-    const phoneNumber = '591619131210';
+    const phoneNumber = '59172401884';
     const message = encodeURIComponent(
       lang === 'es' 
         ? `Hola, me gustaría reservar el tour: ${getTitle()}`
