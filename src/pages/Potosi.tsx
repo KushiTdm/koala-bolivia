@@ -15,6 +15,9 @@ export default function Potosi() {
   const lang = (params.lang || 'es') as Language;
   const hostal = getHostalByDestination('potosi');
   const tours = getToursByDestination('potosi');
+  
+  // Trier les tours par nombre de jours (ordre croissant)
+  const sortedTours = [...tours].sort((a, b) => a.days - b.days);
 
   const headerRef = useRef<HTMLDivElement>(null);
   const heroTransitionRef = useRef<HTMLDivElement>(null);
@@ -235,7 +238,7 @@ export default function Potosi() {
             <p className="text-slate-600 mb-12">{getTranslation(lang, 'potosi.tours')}</p>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {tours.map(tour => (
+              {sortedTours.map(tour => (
                 <div key={tour.id} data-tour-card>
                   <TourCard tour={tour} lang={lang} />
                 </div>

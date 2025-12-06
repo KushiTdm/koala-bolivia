@@ -1,7 +1,7 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Tour } from '../data/tours';
 import { Language } from '../data/translations';
-import { Calendar, Users, DollarSign } from 'lucide-react';
+import { Calendar, Users } from 'lucide-react';
 
 interface TourCardProps {
   tour: Tour;
@@ -25,8 +25,7 @@ export default function TourCard({ tour, lang }: TourCardProps) {
     }
   };
 
-  const bookLabel = lang === 'es' ? 'Reservar' : lang === 'en' ? 'Book' : 'Réserver';
-  const perPersonLabel = lang === 'es' ? 'por persona' : lang === 'en' ? 'per person' : 'par personne';
+  const bookLabel = lang === 'es' ? 'Ver detalles' : lang === 'en' ? 'View details' : 'Voir détails';
 
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
@@ -37,26 +36,22 @@ export default function TourCard({ tour, lang }: TourCardProps) {
 
         <p className="text-slate-600 text-sm mb-4 line-clamp-2">{getDescription()}</p>
 
-        <div className="grid grid-cols-3 gap-3 mb-6 text-sm">
+        <div className={`grid ${tour.nights === 0 ? 'grid-cols-1' : 'grid-cols-2'} gap-3 mb-6 text-sm`}>
           <div className="flex items-center gap-2 text-slate-700">
             <Calendar size={16} className="text-amber-600" />
             <span>{tour.days} {tour.days === 1 ? (lang === 'es' ? 'día' : lang === 'en' ? 'day' : 'jour') : (lang === 'es' ? 'días' : lang === 'en' ? 'days' : 'jours')}</span>
           </div>
-          <div className="flex items-center gap-2 text-slate-700">
-            <Users size={16} className="text-amber-600" />
-            <span>{tour.nights} {tour.nights === 1 ? (lang === 'es' ? 'noche' : lang === 'en' ? 'night' : 'nuit') : (lang === 'es' ? 'noches' : lang === 'en' ? 'nights' : 'nuits')}</span>
-          </div>
-          <div className="flex items-center gap-2 text-amber-600 font-semibold">
-            <DollarSign size={16} />
-            <span>${tour.price}</span>
-          </div>
+          {tour.nights > 0 && (
+            <div className="flex items-center gap-2 text-slate-700">
+              <Users size={16} className="text-amber-600" />
+              <span>{tour.nights} {tour.nights === 1 ? (lang === 'es' ? 'noche' : lang === 'en' ? 'night' : 'nuit') : (lang === 'es' ? 'noches' : lang === 'en' ? 'nights' : 'nuits')}</span>
+            </div>
+          )}
         </div>
-
-        <p className="text-xs text-slate-500 mb-4">{perPersonLabel}</p>
 
         <Link
           to={`/${lang}/tours/${tour.id}`}
-          className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors text-center"
+          className="block w-full bg-amber-600 hover:bg-amber-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors text-center"
         >
           {bookLabel}
         </Link>

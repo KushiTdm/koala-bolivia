@@ -1,3 +1,4 @@
+// src/pages/TourDetail.tsx
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
@@ -16,6 +17,9 @@ export default function TourDetail() {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+
     if (contentRef.current) {
       gsap.fromTo(
         contentRef.current,
@@ -114,7 +118,6 @@ export default function TourDetail() {
     } else if (tour.destination.toLowerCase() === 'uyuni') {
       return '59172401884';
     }
-    // Numéro par défaut si la destination n'est ni Potosi ni Uyuni
     return '59172401884';
   };
 
@@ -135,8 +138,6 @@ export default function TourDetail() {
   const includesLabel = getTranslation(lang, 'uyuni.includes');
   const daysLabel = getTranslation(lang, 'uyuni.days');
   const nightsLabel = getTranslation(lang, 'uyuni.nights');
-  const priceLabel = getTranslation(lang, 'uyuni.price');
-  const perPersonLabel = getTranslation(lang, 'uyuni.perPerson');
   const bookLabel = getTranslation(lang, 'uyuni.book');
 
   return (
@@ -159,7 +160,7 @@ export default function TourDetail() {
         <div ref={contentRef}>
           <h1 className="text-4xl font-bold text-slate-900 mb-6">{getTitle()}</h1>
 
-          <div className="grid md:grid-cols-3 gap-4 mb-12">
+          <div className={`grid ${tour.nights === 0 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-4 mb-12`}>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-center gap-2 text-amber-600 mb-2">
                 <Calendar size={20} />
@@ -168,13 +169,15 @@ export default function TourDetail() {
               <p className="text-slate-600 text-sm">{daysLabel}</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center gap-2 text-amber-600 mb-2">
-                <Users size={20} />
-                <span className="font-semibold">{tour.nights}</span>
+            {tour.nights > 0 && (
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center gap-2 text-amber-600 mb-2">
+                  <Users size={20} />
+                  <span className="font-semibold">{tour.nights}</span>
+                </div>
+                <p className="text-slate-600 text-sm">{nightsLabel}</p>
               </div>
-              <p className="text-slate-600 text-sm">{nightsLabel}</p>
-            </div>
+            )}
 
             <div className="bg-green-600 text-white p-6 rounded-lg shadow-md flex flex-col justify-between">
               <p className="text-sm mb-2">{lang === 'es' ? 'Listo para reservar' : lang === 'en' ? 'Ready to book' : 'Prêt à réserver'}</p>

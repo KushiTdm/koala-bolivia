@@ -1,5 +1,6 @@
 // src/pages/RoomDetail.tsx
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Language, getTranslation } from '../data/translations';
 import { getHostalByDestination } from '../data/hostals';
 import { Users, Maximize2, ArrowLeft, MessageCircle, Check } from 'lucide-react';
@@ -23,6 +24,11 @@ export default function RoomDetail() {
   const destination = location.pathname.includes('uyuni') ? 'uyuni' : 'potosi';
   const hostal = getHostalByDestination(destination);
   const room = hostal?.rooms.find(r => r.id === id);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!room || !hostal) {
     return (
