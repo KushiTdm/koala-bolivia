@@ -32,6 +32,7 @@ export default function Header() {
   };
 
   const handleWhatsAppContact = () => {
+    // 7. Botón "Contactar" arriba: WhatsApp 591 72401884
     const phoneNumber = '59172401884';
     const message = encodeURIComponent(
       lang === 'es'

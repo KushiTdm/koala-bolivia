@@ -16,24 +16,77 @@ export default function Footer() {
 
   const lang = getCurrentLang();
 
-  // Déterminer la destination actuelle
-  const getCurrentDestination = (): 'uyuni' | 'potosi' => {
-    if (location.pathname.includes('/uyuni')) {
-      return 'uyuni';
+  // Déterminer le contexte actuel (destination + type de page)
+  const getCurrentContext = (): { destination: 'uyuni' | 'potosi', type: 'tour' | 'hostal' | 'general' } => {
+    const path = location.pathname.toLowerCase();
+    
+    // Vérifier si on est sur une page de tour
+    if (path.includes('/tours/')) {
+      // Si c'est le tour uyuni-custom spécifiquement
+      if (path.includes('uyuni-custom')) {
+        return { destination: 'uyuni', type: 'tour' };
+      }
+      // Tous les autres tours sont de Potosí
+      return { destination: 'potosi', type: 'tour' };
     }
-    return 'potosi'; // défaut
+    
+    // Vérifier si on est sur une page d'hostal (room)
+    if (path.includes('/room/')) {
+      if (path.includes('/uyuni/')) {
+        return { destination: 'uyuni', type: 'hostal' };
+      } else if (path.includes('/potosi/')) {
+        return { destination: 'potosi', type: 'hostal' };
+      }
+    }
+    
+    // Pages générales uyuni ou potosi
+    if (path.includes('/uyuni')) {
+      return { destination: 'uyuni', type: 'general' };
+    }
+    
+    return { destination: 'potosi', type: 'general' };
   };
 
-  const destination = getCurrentDestination();
+  const context = getCurrentContext();
 
   const contactInfo = {
-    uyuni: {
+    // 1. Tours Potosí: WhatsApp 591 61914606 / Email koalabolivia@hotmail.com
+    potosi_tour: {
+      phone: '59161914606',
+      email: 'koalabolivia@hotmail.com',
+      street: 'Linares 88A, Villa Imperial de Potosí',
+      coords: '-19.5859,-65.7533'
+    },
+    // 2. Tour exclusivo Salar Uyuni: WhatsApp 591 72401884 / Email salarpotosi@gmail.com
+    uyuni_tour: {
+      phone: '59172401884',
+      email: 'salarpotosi@gmail.com',
+      street: 'Calle Cabrera entre Santa Cruz y Colombia',
+      coords: '-19.2271,-66.8253'
+    },
+    // 3. Hostal Potosí: WhatsApp 591 72401884 / Email salarpotosi@gmail.com
+    potosi_hostal: {
+      phone: '59172401884',
+      email: 'salarpotosi@gmail.com',
+      street: 'Linares 88A, Villa Imperial de Potosí',
+      coords: '-19.5859,-65.7533'
+    },
+    // 4. Hostal Uyuni: WhatsApp 591 61913121 / Email eucalyptusuyuni@gmail.com
+    uyuni_hostal: {
       phone: '59161913121',
       email: 'eucalyptusuyuni@gmail.com',
       street: 'Calle Cabrera entre Santa Cruz y Colombia',
       coords: '-19.2271,-66.8253'
     },
-    potosi: {
+    // 5. Parte inferior de página Uyuni: WhatsApp 591 61913121 / Email eucalyptusuyuni@gmail.com
+    uyuni_general: {
+      phone: '59161913121',
+      email: 'eucalyptusuyuni@gmail.com',
+      street: 'Calle Cabrera entre Santa Cruz y Colombia',
+      coords: '-19.2271,-66.8253'
+    },
+    // 6. Parte inferior de página Potosí: WhatsApp 591 72401884 / Email salarpotosi@gmail.com
+    potosi_general: {
       phone: '59172401884',
       email: 'salarpotosi@gmail.com',
       street: 'Linares 88A, Villa Imperial de Potosí',
@@ -41,7 +94,13 @@ export default function Footer() {
     }
   };
 
-  const currentContact = contactInfo[destination];
+  // Sélectionner les bonnes informations de contact selon le contexte
+  const getContactInfo = () => {
+    const key = `${context.destination}_${context.type}` as keyof typeof contactInfo;
+    return contactInfo[key];
+  };
+
+  const currentContact = getContactInfo();
 
   const handlePhoneClick = () => {
     const message = encodeURIComponent(

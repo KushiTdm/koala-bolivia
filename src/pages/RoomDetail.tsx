@@ -78,9 +78,12 @@ export default function RoomDetail() {
   };
 
   const getWhatsAppNumber = () => {
+    // 8. Reserva habitación Potosí: WhatsApp 591 72401884
     if (destination.toLowerCase() === 'potosi') {
       return '59172401884';
-    } else if (destination.toLowerCase() === 'uyuni') {
+    } 
+    // 9. Reserva habitación Uyuni: WhatsApp 591 61913121
+    else if (destination.toLowerCase() === 'uyuni') {
       return '59161913121';
     }
     // Numéro par défaut

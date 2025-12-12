@@ -105,7 +105,7 @@ export const hostals: Hostal[] = [
       }
     ],
     email: 'eucalyptusuyuni@mail.com',
-    phone: '+591 72401884',
+    phone: '+591 61913121',
     address: 'Calle Cabrera entre Santa Cruz y Colombia, Uyuni, Bolivia'
   },
   

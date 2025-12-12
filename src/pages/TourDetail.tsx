@@ -113,9 +113,12 @@ export default function TourDetail() {
   };
 
   const getWhatsAppNumber = () => {
+    // 1. Tours Potosí: WhatsApp 591 61914606
     if (tour.destination.toLowerCase() === 'potosi') {
       return '59161914606';
-    } else if (tour.destination.toLowerCase() === 'uyuni') {
+    } 
+    // 2. Tour exclusivo Salar Uyuni: WhatsApp 591 72401884
+    else if (tour.destination.toLowerCase() === 'uyuni') {
       return '59172401884';
     }
     return '59172401884';
