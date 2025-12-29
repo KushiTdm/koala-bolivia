@@ -1,71 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   <!-- Page d'accueil -->
   <url>
-    <loc>https://koalabolivia.com.bo/</loc>
-    <lastmod>2024-11-27</lastmod>
+    <loc>https://koalabolivia.com/</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com.bo/es"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com.bo/en"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com.bo/fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://koalabolivia.com/"/>
   </url>
   
-  <!-- Hostal Eucalyptus Uyuni -->
+  <!-- Uyuni - ES -->
   <url>
-    <loc>https://koalabolivia.com.bo/hostal-uyuni</loc>
-    <lastmod>2024-11-27</lastmod>
+    <loc>https://koalabolivia.com/es/uyuni</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com.bo/es/hostal-uyuni"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com.bo/en/hostal-uyuni"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com.bo/fr/hostal-uyuni"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com/es/uyuni"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com/en/uyuni"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com/fr/uyuni"/>
   </url>
   
-  <!-- Hostal Eucalyptus Potosí -->
+  <!-- Uyuni - EN -->
   <url>
-    <loc>https://koalabolivia.com.bo/hostal-potosi</loc>
-    <lastmod>2024-11-27</lastmod>
+    <loc>https://koalabolivia.com/en/uyuni</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com.bo/es/hostal-potosi"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com.bo/en/hostal-potosi"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com.bo/fr/hostal-potosi"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com/es/uyuni"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com/en/uyuni"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com/fr/uyuni"/>
   </url>
   
-  <!-- Tours Uyuni -->
+  <!-- Uyuni - FR -->
   <url>
-    <loc>https://koalabolivia.com.bo/tours-uyuni</loc>
-    <lastmod>2024-11-27</lastmod>
+    <loc>https://koalabolivia.com/fr/uyuni</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com.bo/es/tours-uyuni"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com.bo/en/tours-uyuni"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com.bo/fr/tours-uyuni"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com/es/uyuni"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com/en/uyuni"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com/fr/uyuni"/>
+  </url>
+  
+  <!-- Potosí - ES -->
+  <url>
+    <loc>https://koalabolivia.com/es/potosi</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com/es/potosi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com/en/potosi"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com/fr/potosi"/>
+  </url>
+  
+  <!-- Potosí - EN -->
+  <url>
+    <loc>https://koalabolivia.com/en/potosi</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com/es/potosi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com/en/potosi"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com/fr/potosi"/>
+  </url>
+  
+  <!-- Potosí - FR -->
+  <url>
+    <loc>https://koalabolivia.com/fr/potosi</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com/es/potosi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com/en/potosi"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com/fr/potosi"/>
+  </url>
+  
+  <!-- Tour Uyuni Custom -->
+  <url>
+    <loc>https://koalabolivia.com/es/tours/uyuni-custom</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com/es/tours/uyuni-custom"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com/en/tours/uyuni-custom"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com/fr/tours/uyuni-custom"/>
   </url>
   
   <!-- Tours Potosí -->
   <url>
-    <loc>https://koalabolivia.com.bo/tours-potosi</loc>
-    <lastmod>2024-11-27</lastmod>
+    <loc>https://koalabolivia.com/es/tours/potosi-mining-tour</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com.bo/es/tours-potosi"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com.bo/en/tours-potosi"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com.bo/fr/tours-potosi"/>
+    <priority>0.8</priority>
   </url>
   
-  <!-- Contact -->
   <url>
-    <loc>https://koalabolivia.com.bo/contact</loc>
-    <lastmod>2024-11-27</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://koalabolivia.com/es/tours/potosi-city-tour</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Chambres Uyuni -->
+  <url>
+    <loc>https://koalabolivia.com/es/uyuni/rooms/room-simple</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://koalabolivia.com.bo/es/contact"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://koalabolivia.com.bo/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://koalabolivia.com.bo/fr/contact"/>
+  </url>
+  
+  <url>
+    <loc>https://koalabolivia.com/es/uyuni/rooms/room-matrimonial</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Chambres Potosí -->
+  <url>
+    <loc>https://koalabolivia.com/es/potosi/rooms/room-simple-potosi</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   
 </urlset>

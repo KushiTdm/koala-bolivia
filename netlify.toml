@@ -2,12 +2,26 @@
   command = "npm run build"
   publish = "dist"
 
+# Redirection SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Optimisation des headers pour SEO et performance
+# Redirection domaine (si nécessaire)
+[[redirects]]
+  from = "https://koala-bolivia.netlify.app/*"
+  to = "https://koalabolivia.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://koalabolivia.com/*"
+  to = "https://koalabolivia.com/:splat"
+  status = 301
+  force = true
+
+# Headers de sécurité et SEO
 [[headers]]
   for = "/*"
   [headers.values]
@@ -15,7 +29,10 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(self), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
+# Cache des images optimisé
 [[headers]]
   for = "/*.webp"
   [headers.values]
@@ -23,6 +40,11 @@
 
 [[headers]]
   for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpeg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
@@ -35,3 +57,18 @@
   for = "/logo.webp"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache des assets JS/CSS
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Préchargement DNS
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Link = '''
+    <https://fonts.googleapis.com>; rel=preconnect; crossorigin,
+    <https://www.google-analytics.com>; rel=preconnect
+    '''

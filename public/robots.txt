@@ -1,15 +1,22 @@
-# robots.txt pour koalabolivia.com.bo
+# robots.txt pour koalabolivia.com
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://koalabolivia.com.bo/sitemap.xml
+Sitemap: https://koalabolivia.com/sitemap.xml
 
-# Bloquer les dossiers système
+# Bloquer les dossiers système si nécessaire
 Disallow: /admin/
 Disallow: /api/
 Disallow: /.well-known/
 
 # Optimiser le crawl
 Crawl-delay: 1
+
+# Permettre aux bots de suivre les liens JavaScript
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

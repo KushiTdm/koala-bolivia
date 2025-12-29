@@ -17,30 +17,30 @@
     <meta name="keywords" content="hostal uyuni, hostal potosi, salar de uyuni tour, tours bolivia, laguna colorada, hostal eucalyptus, koala bolivia, accommodation uyuni, potosi tours, backpacker bolivia" />
     
     <!-- Langues alternatives -->
-    <link rel="alternate" hreflang="es" href="https://koalabolivia.com.bo/es" />
-    <link rel="alternate" hreflang="en" href="https://koalabolivia.com.bo/en" />
-    <link rel="alternate" hreflang="fr" href="https://koalabolivia.com.bo/fr" />
-    <link rel="alternate" hreflang="x-default" href="https://koalabolivia.com.bo" />
+    <link rel="alternate" hreflang="es" href="https://koalabolivia.com/es" />
+    <link rel="alternate" hreflang="en" href="https://koalabolivia.com/en" />
+    <link rel="alternate" hreflang="fr" href="https://koalabolivia.com/fr" />
+    <link rel="alternate" hreflang="x-default" href="https://koalabolivia.com" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://koalabolivia.com.bo" />
+    <link rel="canonical" href="https://koalabolivia.com" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://koalabolivia.com.bo" />
+    <meta property="og:url" content="https://koalabolivia.com" />
     <meta property="og:title" content="Koala Bolivia | Hostales Eucalyptus y Tours en Uyuni y Potosí" />
     <meta property="og:description" content="Hostales cómodos en Uyuni y Potosí. Tours al Salar de Uyuni, Laguna Colorada y más. Tu aventura boliviana comienza aquí." />
-    <meta property="og:image" content="https://koalabolivia.com.bo/logo.webp" />
+    <meta property="og:image" content="https://koalabolivia.com/logo.webp" />
     <meta property="og:locale" content="es_BO" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="fr_FR" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://koalabolivia.com.bo" />
+    <meta name="twitter:url" content="https://koalabolivia.com" />
     <meta name="twitter:title" content="Koala Bolivia | Hostales y Tours en Uyuni y Potosí" />
     <meta name="twitter:description" content="Hostales Eucalyptus y tours al Salar de Uyuni. Reserva tu aventura en Bolivia." />
-    <meta name="twitter:image" content="https://koalabolivia.com.bo/logo.webp" />
+    <meta name="twitter:image" content="https://koalabolivia.com/logo.webp" />
     
     <!-- Geo tags -->
     <meta name="geo.region" content="BO-L" />
@@ -53,57 +53,126 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "TouristAttraction",
-          "@id": "https://koalabolivia.com.bo/#organization",
+          "@type": "TravelAgency",
+          "@id": "https://koalabolivia.com/#organization",
           "name": "Koala Bolivia",
-          "url": "https://koalabolivia.com.bo",
-          "logo": "https://koalabolivia.com.bo/logo.webp",
+          "url": "https://koalabolivia.com",
+          "logo": "https://koalabolivia.com/logo.webp",
           "description": "Operador turístico especializado en tours al Salar de Uyuni y alojamiento en Hostales Eucalyptus",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "BO",
             "addressRegion": "Potosí"
           },
-          "sameAs": []
+          "sameAs": [
+            "https://www.facebook.com/p/KOALA-TOURS-100064098846414/"
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+591-72401884",
+              "contactType": "customer service",
+              "areaServed": "BO",
+              "availableLanguage": ["Spanish", "English", "French"]
+            }
+          ]
         },
         {
           "@type": "Hostel",
           "name": "Hostal Eucalyptus Uyuni",
+          "image": "https://koalabolivia.com/hostal-uyuni.jpg",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Calle Cabrera entre Santa Cruz y Colombia",
             "addressLocality": "Uyuni",
             "addressRegion": "Potosí",
             "addressCountry": "BO"
           },
           "priceRange": "$$",
-          "url": "https://koalabolivia.com.bo"
+          "url": "https://koalabolivia.com/es/uyuni",
+          "telephone": "+591-61913121",
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "WiFi",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Heating",
+              "value": true
+            }
+          ]
         },
         {
           "@type": "Hostel",
           "name": "Hostal Eucalyptus Potosí",
+          "image": "https://koalabolivia.com/hostal-eucaliptus-potosi-1.webp",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Linares 88A",
             "addressLocality": "Potosí",
             "addressRegion": "Potosí",
             "addressCountry": "BO"
           },
           "priceRange": "$$",
-          "url": "https://koalabolivia.com.bo"
+          "url": "https://koalabolivia.com/es/potosi",
+          "telephone": "+591-72401884",
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "WiFi",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Viewpoint",
+              "value": true
+            }
+          ]
         },
         {
           "@type": "TouristTrip",
           "name": "Tours Salar de Uyuni",
-          "description": "Excursiones de 1, 2 y 3 días al Salar de Uyuni, Laguna Colorada y Sud Lípez",
+          "description": "Excursiones personalizadas al Salar de Uyuni, Laguna Colorada y Sud Lípez",
+          "provider": {
+            "@id": "https://koalabolivia.com/#organization"
+          },
           "itinerary": {
             "@type": "ItemList",
             "itemListElement": [
               {
-                "@type": "Place",
+                "@type": "TouristAttraction",
                 "name": "Salar de Uyuni"
               },
               {
-                "@type": "Place",
+                "@type": "TouristAttraction",
                 "name": "Laguna Colorada"
+              },
+              {
+                "@type": "TouristAttraction",
+                "name": "Isla Incahuasi"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "TouristTrip",
+          "name": "Tours Minas de Potosí",
+          "description": "Experiencia auténtica en las minas activas del Cerro Rico con ex-mineros",
+          "provider": {
+            "@id": "https://koalabolivia.com/#organization"
+          },
+          "itinerary": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "TouristAttraction",
+                "name": "Cerro Rico"
+              },
+              {
+                "@type": "TouristAttraction",
+                "name": "Casa de la Moneda"
               }
             ]
           }
@@ -120,6 +189,9 @@
     
     <!-- Theme color -->
     <meta name="theme-color" content="#2c5f4f" />
+    
+    <!-- Preconnect pour performance -->
+    <link rel="preconnect" href="https://www.google-analytics.com" />
   </head>
   <body>
     <div id="root"></div>
